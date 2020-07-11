@@ -5,7 +5,7 @@ import { sketch } from './sketch';
 
 const PlannerP5 = () => {
   return (
-    <div>
+    <div style={{display: "flex"}}>
       <P5Wrapper sketch={sketch}></P5Wrapper>
     </div>
   );

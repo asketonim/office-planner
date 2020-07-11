@@ -2,7 +2,7 @@ export const sketch = (p) => {
   let canvas;
 
   p.setup = () => {
-    canvas = p.createCanvas(300, 200);
+    canvas = p.createCanvas(300, 300);
     // p.noStroke();
   };
 

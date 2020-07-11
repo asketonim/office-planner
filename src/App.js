@@ -3,6 +3,8 @@ import React from 'react';
 import Planner from './components/Planner/Planner';
 import PlannerP5 from './components/PlannerP5/PlannerP5';
 
+import './App.css';
+
 const App = () => {
   return (
     <div className="App">
