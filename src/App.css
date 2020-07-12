@@ -1,13 +1,13 @@
 .App {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  /* justify-content: space-evenly; */
   margin-top: 50px;
 }
 
 .FormHolder {
   width: 20%;
-  margin: 0 auto;
+  margin: 0 24px;
 }
 
 .Form {

@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 
 import Planner from './components/Planner/Planner';
-import PlannerP5 from './components/PlannerP5/PlannerP5';
 
 import './App.css';
 
@@ -12,60 +11,51 @@ const App = () => {
   });
 
   const formChangeHandler = (event) => {
-    setSize({ ...size, [event.target.name]: event.target.value || 1 });
+    setSize({ ...size, [event.target.name]: event.target.value > 0 ? event.target.value : 1 });
   }
 
   return (
     <div>
-      <div className='FormHolder'>
-        <div>
-          <label>
-            Height:
-            <br />
-            <input
-              className='Form'
-              placeholder="Enter height"
-              id="height"
-              type="text"
-              name="height"
-              onChange={formChangeHandler}
-              required
-            />
-          </label>
-        </div>
-
-        <div>
-          <label>
-            Width:
-            <br />
-            <input
-              className='Form'
-              placeholder="Enter width"
-              id="width"
-              type="text"
-              name="width"
-              onChange={formChangeHandler}
-              required
-            />
-          </label>
-        </div>
-
-        {/* <button
-          className='btn'
-          type="button"
-          onClick={submitSizeHandler}
-        >
-          Sign in
-        </button> */}
-
-      </div>
 
       <div className="App">
+        <div className='FormHolder'>
+          <div>
+            <label>
+              Height:
+              <br />
+              <input
+                className='Form'
+                placeholder="10"
+                id="height"
+                type="text"
+                name="height"
+                onChange={formChangeHandler}
+                required
+              />
+            </label>
+          </div>
+
+          <div>
+            <label>
+              Width:
+              <br />
+              <input
+                className='Form'
+                placeholder="10"
+                id="width"
+                type="number"
+                name="width"
+                onChange={formChangeHandler}
+                required
+              />
+            </label>
+          </div>
+
+        </div>
         <Planner
           height={size.height}
           width={size.width}
         />
-        <PlannerP5 />
       </div>
     </div>
   );

@@ -34,7 +34,7 @@ const Planner = ({ height, width }) => {
       ));
     }
     table.push((
-      <tr>
+      <tr key={Math.random()}>
         {tableRow}
       </tr>
     ));
@@ -44,9 +44,7 @@ const Planner = ({ height, width }) => {
   return (
     <div>
       <table border='1'>
-        <tbody>
-          {table}
-        </tbody>
+        <tbody>{ table }</tbody>
       </table>
     </div>
   );
