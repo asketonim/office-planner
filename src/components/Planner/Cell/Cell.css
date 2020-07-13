@@ -6,7 +6,8 @@
   border-bottom: 15px solid red;
 } */
 .Cell {
-  width: 15px;
-  height: 15px;
-  border: 1px solid red;
+  width: 16px;
+  height: 16px;
+  border: 1px solid rgba(94, 111, 100, 0.2);
+  text-align: center;
 }
