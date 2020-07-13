@@ -1,7 +1,5 @@
 import React from 'react';
 
-import ArrowDropDownCircleOutlinedIcon from '@material-ui/icons/ArrowDropDownCircleOutlined';
-
 import './Cell.css';
 
 const Cell = ({ index, items, setItems }) => {
@@ -16,7 +14,7 @@ const Cell = ({ index, items, setItems }) => {
 
   return (
     <td style={items[index.i] ? items[index.i][index.j] : {backgroundColor: 'white'}} onClick={() => cellClickHandler(index)} className='Cell'>
-      {/* <ArrowDropDownCircleOutlinedIcon fontSize="small" /> */}
+
     </td>
   );
 };
