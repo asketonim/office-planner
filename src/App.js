@@ -20,8 +20,8 @@ const App = () => {
   });
 
   const [tool, setTool] = useState({
-    toolImg: null,
-    toolColor: null
+    name: '',
+    dir: ''
   });
 
   return (
