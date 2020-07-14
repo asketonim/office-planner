@@ -12,14 +12,6 @@ const App = () => {
     width: 10
   });
 
-  const [currentCell, setCurrentCell] = useState({
-    i: 0,
-    j: 0,
-    empty: true,
-    name: '',
-    dir: 0
-  });
-
   const [tool, setTool] = useState({
     name: '',
     dir: ''
