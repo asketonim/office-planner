@@ -25,9 +25,9 @@ const PlannerControls = ({ tool, setTool }) => {
   };
 
   return (
-    <div className='Controls'>
+    <div className='PlannerControls'>
       <h2>Controls</h2>
-      <List component="nav">
+      <List style={{width: '100%'}}>
         <ListItem button onClick={chairClickHandler} selected={tool.name === 'chair'} >
           <ListItemIcon>
             <Chair dir={chairDir} />

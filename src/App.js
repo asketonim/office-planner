@@ -26,17 +26,19 @@ const App = () => {
 
   return (
     <div className="App">
-      <PlannerForm
-        size={size}
-        setSize={setSize}
-      />
+      <div className="Controls">  
+        <PlannerForm
+          size={size}
+          setSize={setSize}
+        />
+        <PlannerControls
+          tool={tool}
+          setTool={setTool}
+        />
+      </div>
       <Planner
         height={size.height}
         width={size.width}
-      />
-      <PlannerControls
-        tool={tool}
-        setTool={setTool}
       />
     </div>
   );

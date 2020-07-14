@@ -9,6 +9,7 @@ const PlannerForm = ({ size, setSize }) => {
 
   return (
     <div className='FormHolder'>
+      <h2>Size</h2>
       <div>
         <label>
           Height:

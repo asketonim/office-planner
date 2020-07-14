@@ -43,6 +43,7 @@ const Planner = ({ height, width }) => {
 
   return (
     <div>
+      <h2>Office plan</h2>
       <table border='1'>
         <tbody>{ table }</tbody>
       </table>
