@@ -4,7 +4,7 @@ import Cell from './Cell/Cell';
 
 import './Planner.css';
 
-const Planner = ({ height, width }) => {
+const Planner = ({ height, width, tool }) => {
   const [items, setItems] = useState([]);
 
   useEffect(() => {
@@ -12,7 +12,11 @@ const Planner = ({ height, width }) => {
     for (let i = 0; i < height; i++) {
         const row = []
         for (let j = 0; j < width; j++) {
-          row.push({backgroundColor: '#fff'});
+          row.push({
+            name: '',
+            dir: 0,
+            backgroundColor: '#fff'
+          });
         }
         matrix.push(row);
     }
@@ -29,6 +33,7 @@ const Planner = ({ height, width }) => {
           index={{i, j}}
           items={items}
           setItems={setItems}
+          tool={tool}
           key={Math.random()}
         />
       ));

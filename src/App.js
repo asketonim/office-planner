@@ -16,7 +16,8 @@ const App = () => {
     i: 0,
     j: 0,
     empty: true,
-    backgroundImg: null
+    name: '',
+    dir: 0
   });
 
   const [tool, setTool] = useState({
@@ -39,6 +40,7 @@ const App = () => {
       <Planner
         height={size.height}
         width={size.width}
+        tool={tool}
       />
     </div>
   );

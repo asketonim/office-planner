@@ -17,7 +17,7 @@ const PlannerControls = ({ tool, setTool }) => {
 
   const chairClickHandler = () => {
     if (tool.name === 'chair') setChairDir((chairDir + 90) % 360);
-    setTool({ name: 'chair', dir: chairDir });
+    setTool({ name: 'chair', dir: tool.name === 'chair' ? (chairDir + 90) % 360  : chairDir });
   };
 
   const wallClickHandler = () => {
