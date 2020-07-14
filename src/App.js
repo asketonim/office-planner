@@ -1,15 +1,39 @@
-import React from 'react';
+import React, { useState } from 'react';
 
+import PlannerForm from './components/PlannerForm/PlannerForm';
 import Planner from './components/Planner/Planner';
-import PlannerP5 from './components/PlannerP5/PlannerP5';
+import PlannerControls from './components/PlannerControls/PlannerControls';
 
 import './App.css';
 
 const App = () => {
+  const [size, setSize] = useState({
+    height: 10,
+    width: 10
+  });
+
+  const [tool, setTool] = useState({
+    name: '',
+    dir: ''
+  });
+
   return (
     <div className="App">
-      <Planner />
-      <PlannerP5 />
+      <div className="Controls">  
+        <PlannerForm
+          size={size}
+          setSize={setSize}
+        />
+        <PlannerControls
+          tool={tool}
+          setTool={setTool}
+        />
+      </div>
+      <Planner
+        height={size.height}
+        width={size.width}
+        tool={tool}
+      />
     </div>
   );
 };
