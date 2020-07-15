@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
-import Chair from './Chair/Chair';
-import AppsIcon from '@material-ui/icons/Apps';
+import Chair from '../../catalog/Chair/Chair';
+import Wall from '../../catalog/Wall/Wall';
 import { 
   List,
   ListItem,
@@ -36,7 +36,7 @@ const PlannerControls = ({ tool, setTool }) => {
         </ListItem>
         <ListItem button onClick={wallClickHandler} selected={tool.name === 'wall'}>
           <ListItemIcon>
-            <AppsIcon fontSize='small' />
+            <Wall />
           </ListItemIcon>
           <ListItemText primary="Wall" />
         </ListItem>

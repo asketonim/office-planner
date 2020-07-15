@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Draw from '../../PlannerControls/Draw';
+import Draw from '../../Draw/Draw';
 
 import './Cell.css';
 
