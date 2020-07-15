@@ -11,7 +11,7 @@ const PlannerForm = ({ size, setSize }) => {
     const value = parseInt(event.target.value, 10);
     if (typeof value === 'number' && value > 0 && value <= 30) {
       setError({...error, [event.target.name]: ''});
-      setSize({ ...size, [event.target.name]: event.target.value > 0 ? event.target.value : 1 });
+      setSize({ ...size, [event.target.name]: event.target.value });
     } else {
       setError({...error, [event.target.name]: `${event.target.name} should be in 1-30 range`});
     }
