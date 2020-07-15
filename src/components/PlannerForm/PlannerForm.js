@@ -1,5 +1,7 @@
 import React from 'react';
 
+import TextField from '@material-ui/core/TextField';
+
 import './PlannerForm.css';
 
 const PlannerForm = ({ size, setSize }) => {
@@ -10,36 +12,28 @@ const PlannerForm = ({ size, setSize }) => {
   return (
     <div className='FormHolder'>
       <h2>Size</h2>
-      <div>
-        <label>
-          Height:
-          <br />
-          <input
-            className='Form'
-            placeholder="10"
-            id="height"
-            type="text"
-            name="height"
-            onChange={formChangeHandler}
-            required
-          />
-        </label>
-      </div>
-      <div>
-        <label>
-          Width:
-          <br />
-          <input
-            className='Form'
-            placeholder="10"
-            id="width"
-            type="number"
-            name="width"
-            onChange={formChangeHandler}
-            required
-          />
-        </label>
-      </div>
+      <form className='Form' noValidate autoComplete="off">
+        <TextField
+          id="outlined-basic"
+          label="Height"
+          variant="standard"
+          name='height'
+          onChange={formChangeHandler}
+          style={{
+            margin: '8px 0'
+          }}
+        />
+        <TextField
+          id="outlined-basic"
+          label="Width"
+          variant="standard"
+          name='width'
+          onChange={formChangeHandler}
+          style={{
+            margin: '8px 0'
+          }}
+        />
+      </form>
     </div>
   );
 };
