@@ -4,6 +4,6 @@ import ArrowDropDownCircleOutlinedIcon from '@material-ui/icons/ArrowDropDownCir
 
 const Chair = ({ dir }) => (
   <ArrowDropDownCircleOutlinedIcon style={{transform: `rotate(${dir}deg)`, width: '16px', height: '16px'}} fontSize='small' />
-)
+);
 
 export default Chair;
