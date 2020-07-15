@@ -12,7 +12,6 @@ const Cell = ({ index, items, setItems, tool }) => {
         return cell;
       })
     }))
-    console.log(items);
   }
 
 
